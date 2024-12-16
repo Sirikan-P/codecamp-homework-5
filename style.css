@@ -1,0 +1,350 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+
+   ul { 
+    list-style: none;
+   }
+   
+   a {
+    text-decoration: none;
+   }
+
+   html {
+    font-family: "Kanit", "Ubuntu", sans-serif ;
+    font-size: 15px;
+    line-height: 1.5;
+   }
+
+   :root{
+        --bgcolor: rgb(251, 251, 251);
+        --txcolor: rgb(57, 57, 57);
+        --cicolor: #30decc;
+        --txlightcolor: rgb(131, 131, 131);
+
+   }
+      /* ---------------- */
+
+      body {
+        max-width: 1200px;
+        min-height: 100vh;
+        margin: auto;
+        background-color: var(--bgcolor);
+
+       }
+    
+       .container {
+        display: flex;
+        margin: 0 auto;
+        width: 90%;
+       }
+
+/* ---------------- */
+
+/* Header */
+header{
+    background-color: white;
+    color: var(--txcolor);
+    display: flex;    
+    align-items:center ;
+    box-shadow: 5px 10px 18px #ededed;
+    font-size: 12px;
+   }
+
+header .container{
+    justify-content: space-between;
+
+   }
+
+header .logo{
+    background-color: white;
+    display: flex; 
+    justify-content: center;
+    gap: 4px;
+    padding-inline: 10px;
+}
+
+.logo img{
+    width: 180px;
+}
+
+header nav{
+
+    width: 300px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;     
+    justify-content: space-around;
+    align-items:center ;
+    gap: 8px;
+    padding-inline: 10px;
+
+}
+
+header .login{
+    width: 200px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    display: flex; 
+    justify-content: center;
+    align-items:center ;
+    gap: 12px;
+    padding-inline: 10px;
+    cursor: pointer;
+}
+
+header i{
+    color: var(--txlightcolor);
+    position: relative;
+}
+
+header .count{
+    width: 8px;
+    height: 8px;
+    font-size: 4px;
+    color: white;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px ;
+    right: -5px;
+}
+
+/* ---------------- */
+
+/* Main */
+main{
+    height: 100vh;
+    font-size: 12px;
+    color: var(--txcolor);
+}
+
+
+main .container{
+    justify-content: space-between;
+  
+}
+main h1{
+    font-weight: bold;
+    display: block;
+    padding-block: 10px;
+    
+}
+
+.cart{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 45%;
+}
+
+/* box */
+.cart .box{
+
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    background-color: white;
+    color: var(--txcolor);
+    box-shadow: 5px 10px 18px #dbdada;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orderbox {
+    border: 1px solid rgb(219, 219, 219) ;
+    border-radius: 10px;
+    width: 50%;
+    height: 200px;
+    padding: 20px;
+    background-color: var(--bgcolor);
+    color: var(--txcolor);
+    /* box-shadow: 5px 10px 18px #dbdada; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.item01 {
+    width: 80px;
+    padding: 10px;
+}
+.item01 i{
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid var(--cicolor);
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cicolor);
+}
+
+.item02  {
+    width: 120px;
+    height: 120px;
+    border: none;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.item02  img{
+    width: 100%  
+}
+
+.item02 p{
+    position: absolute;
+    top: 70px;
+    left: 12px;
+    z-index: -2px;
+    color: white;
+    font-size: 10px;
+    font-weight: 200;
+}
+
+.item03 {
+    flex-grow: 1;
+    width: 120px;
+    height: 120px;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.item03 h4{
+    font-size: 16px;
+    font-weight: 400;
+}
+.item03 form{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 6px;
+
+}
+.item03 .level {
+    background-color: var(--cicolor);
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+}
+
+.item03 #lv{
+    font-size: 10px;
+    font-weight: bold  ;
+    padding: 2px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: auto 1px var(--cicolor);
+}
+select:focus-visible {
+    outline: auto 1px var(--cicolor);
+}
+
+.item03 p{
+    line-height: 3.5;
+}
+
+/* ---------------- */
+/* Order Box */
+[class^="obox"] {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-block: 6px;
+    color: var(--txlightcolor);
+}
+
+.obox01 {
+      align-items: start;
+     
+}
+.obox01 h5{
+    font-weight: 300;
+}
+.obox02 {
+    align-items: center;
+    gap: 10px;
+}
+
+.obox02 i {
+    color: var(--cicolor);
+    font-size: 10px;
+}
+
+.obox02 input[type="text"]{
+    width: 150px;
+    height: 20px;
+    border: 1px solid rgb(228, 228, 228);
+    font-size: 8px;
+    flex-grow: 1;
+} 
+
+.obox02 input[type="button"]{
+    width: 80px;
+    height: 20px;
+    border: 1px solid var(--cicolor);
+    border-radius: 8px;
+    font-size:8px;
+    font-weight: bold;
+    color: var(--cicolor);
+    background-color: white;
+    cursor: pointer;
+}
+input[type="button"]:hover{
+    background-color: var(--cicolor);
+    color: white
+}
+.obox03 {
+    align-items: center;
+}
+.obox03 h6{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.obox03 .price{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--cicolor);
+}
+.obox04{
+    height:22px;
+    background-color:var(--cicolor) ;
+    border: none;
+    border-radius: 4px; 
+    box-shadow: 2px 5px 10px 1px #20c99755;
+    font-size: 9px;
+    font-weight: bold;
+    color: var(--txcolor);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.obox04:hover{
+    color: var(--cicolor);
+    background-color: white;
+}
+/* ---------------- */
+
